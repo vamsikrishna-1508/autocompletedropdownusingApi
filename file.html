@@ -4,7 +4,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $(document).ready(function () {
+  $(document).ready(function () {
   $(document).tooltip();
   $.ajax({
     url: "https://jsonplaceholder.typicode.com/users",
@@ -15,19 +15,18 @@
     success: function(data){ 
       var dataJson = [];
       for(var i=0; i < data.length; i++){
-        dataJson.push(data[i].name);
-        console.log(dataJson); 
+        dataJson.push(data[i].name); 
       }
       console.log(dataJson);
       $("#location").autocomplete({
           source: dataJson,
       });
-   },
+     },
     error: function(error){
       console.log(error);
     }
-  });
-});
+    });
+   });
 
     </script>
     <label><strong>  Name </strong></label>
